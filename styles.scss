@@ -1,0 +1,429 @@
+*
+  font-family: calibri
+  font-size: 14px
+  margin: 0
+  padding: 0
+
+body
+  background-color: rgb(44, 57, 66)
+
+a
+  color: #e5edf4
+
+input:focus
+  outline: none
+
+[href]
+  text-decoration: none
+
+/*.top-support-link-menu START*/
+
+.top-support-link-menu
+  display: grid
+  justify-content: END*/
+  grid-template-columns: repeat(6, auto)
+  grid-gap: 22px
+  padding: 13px 70px
+  font-size: 14px
+  font-weight: bold
+  text-transform: uppercase
+  > *
+    text-align: center
+    &:nth-child(2)
+      color: rgb(217, 215, 26)
+
+/*.top-support-link-menu END*/
+
+/*.top-search-user-menu START*/
+
+.top-search-user-menu
+  background: url("./img/banner.png")
+  display: grid
+  grid-template-columns: 1fr 1.75fr 0.25fr 3.75fr 0fr 3fr 0.663fr
+  padding: 23px 68px
+  font-weight: bold
+  text-transform: uppercase
+  >
+    * ~ *
+      display: flex
+      align-items: center
+      border: none
+      margin: 6.5px 0px
+      font-size: 12px
+    [searchBox]
+      background-color: #f8f8f8
+      display: flex
+      align-items: center
+      border: none
+      margin: 6.5px 0px
+      color: #8e8e8e
+      font-size: 13px
+    [userLicon] > * > div
+      text-align: center
+      font-size: 12px
+      margin: 0px 4px
+    *
+      &[searchBox]:not(a)
+        padding: 0px 17px
+      > * > div > img
+        margin: 6px 0px
+    a:first-of-type > *
+      background-color: #3e6885
+      padding: 0 35px 0px 17.5px
+    select[searchBox]
+      font-size: 16px
+      color: #32302f
+
+a[searchBox] > img
+  background-color: #2ca5fa
+  padding: 13px
+
+.top-search-user-menu >
+  * ~ [userLicon]
+    justify-content: center
+  a[cartButton]
+    background-color: #fb816a
+    border-radius: 5px
+    display: grid
+    grid-template-columns: repeat(3, auto)
+    justify-content: space-evenly
+    align-items: center
+    margin: 10.5px 0px
+    > div
+      font-size: 15px
+
+/*.top-search-user-menu END*/
+
+/*.navi START*/
+
+.navi
+  display: flex
+  align-items: center
+  padding: 0 85px
+  text-transform: uppercase
+  > *
+    margin: 0px 12px
+    padding: 16px 5px
+    &:first-child
+      background-color: #fb816a
+      border-radius: 5px
+      display: grid
+      grid-template-columns: repeat(2, auto)
+      justify-content: space-evenly
+      align-items: center
+      margin: 0 50px 0 0
+      padding: 10px 0
+      > *
+        font-size: 15px
+        font-weight: bold
+        padding: 0 16px
+    > div
+      font-size: 17px
+      text-align: center
+    ~ *:hover
+      border-bottom: #379aff solid 8px
+      padding-bottom: 7.5px
+
+/*.navi END*/
+
+/*.header-text-banner START*/
+
+.header-text-banner
+  background-color: white
+  display: flex
+  justify-content: space-around
+  align-items: center
+  padding: 10px 170px 5px 170px
+  >
+    a
+      display: grid
+      grid-template-columns: 1fr auto
+      grid-column-gap: 25px
+    * >
+      img:first-child
+        grid-row: span 3
+      div
+        color: #4b4b4b
+        font-size: 15px
+        font-family: lato
+        font-weight: bold
+        &:last-child
+          font-size: 13px
+          font-weight: normal
+
+/*.header-text-banner END*/
+
+/*content START*/
+
+content
+  background-color: #e0e0e0
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 30px
+  padding: 25px 85px
+  > *
+    background-color: white
+    text-align: center
+    color: #373737
+
+.main-banner
+  grid-column: span 2
+
+/*deal START*/
+
+.deal
+  padding: 15px 25px
+  > div
+    &:first-child
+      display: grid
+      grid-template-rows: 40px 18px
+      > div
+        &:first-child
+          color: #379aff
+          font-size: 40px
+          font-weight: bold
+        &:nth-child(2)
+          color: black
+          font-size: 12px
+          font-weight: bold
+    &:nth-child(2)
+      display: flex
+      justify-content: center
+      > div
+        &:nth-child(odd)
+          color: white
+          background-color: #f0513a
+          font-size: 32px
+        &:nth-child(even)
+          color: #f0513a
+          font-size: 32px
+    &:nth-child(4)
+      font-size: 16px
+      font-weight: bold
+
+.product > div:nth-child(2)
+  font-size: 16px
+  font-weight: bold
+
+.deal > div:nth-child(5)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 1em
+  > div:last-child
+    color: #379aff
+    font-size: 33.18px
+
+.product > div:nth-child(5)
+  color: #379aff
+  font-size: 33.18px
+
+/*deal END*/
+
+/*quick-link START*/
+
+.quick-link
+  grid-column: span 3
+  display: flex
+  justify-content: space-around
+  padding: 18px 20px
+  >
+    *
+      color: black
+      font-size: 15px
+    div:first-child
+      font-weight: bold
+    img
+      align-self: center
+
+/*quick-link END*/
+/*content END*/
+
+/*discounts START*/
+
+discounts
+  background-color: #e0e0e0
+  display: flex
+  align-items: center
+  padding: 0 50px
+
+products > *
+  background-color: #e0e0e0
+  display: flex
+  align-items: center
+  padding: 0 50px
+  &:last-child
+    padding-bottom: 48px
+
+discounts > *, products > * > *
+  background-color: white
+  text-align: center
+  color: #373737
+
+/* Arrow Bullets START*/
+
+ul
+  padding: 0 30px
+  list-style: none
+
+li:before
+  content: ""
+  border-color: transparent #008eef
+  border-style: solid
+  border-width: 0.25em 0 0.25em 0.35em
+  display: block
+  height: 0
+  width: 0
+  left: -25px
+  top: 0.9em
+  position: relative
+
+/* Arrow Bullets END*/
+
+/*disconut-product-area START*/
+
+a[class*="disconut-banner"]
+  padding: 15px 30px
+  text-align: left
+  height: 285px
+  width: 25%
+  background-size: contain
+  &:nth-child(3)
+    margin: 0 31px
+  >
+    div
+      padding: 10px 0
+      font-size: 2.57vw
+      font-weight: bold
+      line-height: 30px
+      letter-spacing: -2px
+      width: 80%
+    ul > li
+      font-size: 1.32vw
+
+.disconut-banner-1
+  background: url("./img/discount-img-banner-1.png") no-repeat
+  > div
+    color: #379aff
+
+.disconut-banner-2
+  background: url("./img/discount-img-banner-2.png") no-repeat
+
+.disconut-banner-3
+  background: url("./img/discount-img-banner-3.png") no-repeat
+  color: white
+  > ul > li:before
+    border-color: transparent white
+
+/*disconut-product-area END*/
+/*discounts END*/
+
+/*products START*/
+
+.carousel-header
+  font-size: 35px
+  color: #32302f
+  padding: 35px 81px 15px
+
+.product
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 7.5px 25px 20px
+  height: 290px
+  border-top: #2ca5fa solid 4px
+  > div:first-child
+    display: flex
+    align-items: center
+    height: 100%
+
+/*products END*/
+
+/*.support-callout START*/
+
+.support-callout
+  background-color: #406884
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 30px 81px
+  >
+    a
+      display: grid
+      grid-template-columns: 1fr auto
+      grid-column-gap: 25px
+    * >
+      img:first-child
+        grid-row: span 3
+      div
+        color: white
+        font-size: 20.78px
+        font-family: lato
+        font-weight: bold
+        &:last-child
+          font-size: 18.01px
+          font-weight: normal
+
+/*.header-text-banner END*/
+
+/*footer START*/
+
+footer
+  display: flex
+  justify-content: space-between
+  color: white
+  background-color: #38464f
+  padding: 35px 81px 71px
+  > div
+    &:last-child
+      width: 26%
+    >
+      div:not(:last-child)
+        display: flex
+        font-size: 20px
+        padding: 15px 0
+      ul
+        line-height: 22px
+        padding: 0 15px
+        > li:before
+          border-width: 0.35em 0 0.35em 0.45em
+          left: -15px
+          top: 1.1em
+
+.news-sign-up >
+  *
+    border: solid #cfcfcf thin
+  input
+    &::placeholder
+      color: white
+    display: flex
+    align-items: center
+    background-color: transparent
+    color: inherit
+    font-size: 13.58px
+    width: 72%
+    padding-left: 15px
+    border-right: none
+  a
+    border-left: none
+
+[social]
+  display: flex
+  align-items: center
+  margin: 0 15px
+  padding: 0 5px
+  > a
+    margin-right: 40px
+
+/*footer END*/
+
+/*Copyright START*/
+
+copyright
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: white
+  padding: 35px 80px
+
+/*Copyright END*/
