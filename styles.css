@@ -180,7 +180,7 @@ input:focus {
 	grid-column-gap: 25px;
 }
 
-.feature__img {
+.header-text-banner__img {
 	/* ¿Cuál es mejor?:
 		a) .header-text-banner__img
 		b) .header-text-banner__feature--img
@@ -190,9 +190,9 @@ input:focus {
 	grid-row: span 3;
 }
 
-.feature__span {
+.header-text-banner__span {
 	/* ¿Cuál es mejor?:
-		a) .header-text-banner__span
+	    a) .header-text-banner__span
 		b) .header-text-banner__feature--span
 		c) .header-text-banner-feature__span
 		d) .feature__span
@@ -203,7 +203,7 @@ input:focus {
     font-weight: bold;
 }
 
-.feature__span--last {
+.header-text-banner__span--last {
     font-size: 13px;
     font-weight: normal;
 }
@@ -391,7 +391,8 @@ li:before {
 .banner__li--white:before {
 	/* ¿No es mejor dejarlo como:
 		".banner--3 > ul >  .banner__li:before"
-		para evitar tanta redundancia y repetición en el markup?
+		para evitar tanta redundancia y repetición
+		en cada linea de la lista en el markup?
 	*/
 	border-color: transparent white;
 }
