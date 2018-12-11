@@ -1,8 +1,8 @@
 # PSDtoHTMLandCSS
 
-## Updates
+## Updates (DD/MM/AAAA)
 
-- Applied some corrections on structure and BEM usage.
+- 11/12/2018 Applied some corrections on structure and BEM usage.
 
 ## How To View:
 
