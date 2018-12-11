@@ -33,12 +33,11 @@ input:focus {
 	text-transform: uppercase;
 }
 
-.top-support-link-menu {
+.top-support-link-menu > * {
 	text-align: center;
-	color: #e5edf4;
 }
 
-.top-support-link-menu__cta {
+.top-support-link-menu > *:nth-child(2) {
 	color: rgb(217, 215, 26);
 }
 /*.top-support-link-menu END*/
@@ -53,13 +52,15 @@ input:focus {
 	text-transform: uppercase;
 }
 
-.top-search-user-menu__logo {
-  	background-color: #3e6885;
-	padding: 0 35px 0px 17.5px;
+.top-search-user-menu > *~* {
+    display: flex;
+    align-items: center;
+    border: none;
+    margin: 6.5px 0px;
+    font-size: 12px;
 }
 
-/*.top-search-user-menu__searchbox START*/
-.top-search-user-menu__searchbox {
+.top-search-user-menu > [searchbox] {
     background-color: #f8f8f8;
     display: flex;
     align-items: center;
@@ -67,43 +68,42 @@ input:focus {
     margin: 6.5px 0px;
     color: #8e8e8e;
     font-size: 13px;
+}
+
+.top-search-user-menu > [userlicon] > * > div {
+    text-align: center;
+    font-size: 12px;
+    margin: 0px 4px;
+}
+
+.top-search-user-menu > *[searchbox]:not(a) {
     padding: 0px 17px;
 }
 
-.searchbox__select {
+.top-search-user-menu > * > * > div > img {
+    margin: 6px 0px;
+}
+
+.top-search-user-menu > a:first-of-type > * {
+  	background-color: #3e6885;
+	padding: 0 35px 0px 17.5px;
+}
+
+.top-search-user-menu > select[searchbox] {
     font-size: 16px;
     color: #32302f;
 }
 
-.searchbox__image {
+a[searchbox] > img {
     background-color: #2ca5fa;
     padding: 13px;
 }
-/*.top-search-user-menu__searchbox END*/
 
-/*.top-search-user-menu__userlicon START*/
-.top-search-user-menu__userlicon {
+.top-search-user-menu > *~[userlicon] {
     justify-content: center;
-    color: #e5edf4;
-    display: flex;
-    align-items: center;
-    border: none;
-    margin: 6.5px 0px;
-    font-size: 12px;
 }
 
-.userlicon__option {
-    text-align: center;
-    font-size: 12px;
-    margin: 0px 8px;
-}
-
-.userlicon__option > img {
-    margin: 6px 0px;
-}
-/*.top-search-user-menu__userlicon END*/
-
-.top-search-user-menu__cartbutton {
+.top-search-user-menu > a[cartbutton] {
     background-color: #fb816a;
     border-radius: 5px;
     display: grid;
@@ -113,7 +113,7 @@ input:focus {
     margin: 10.5px 0px;
 }
 
-.cartbutton_text {
+.top-search-user-menu > a[cartbutton] > div {
     font-size: 15px;
 }
 /*.top-search-user-menu END*/
@@ -126,22 +126,12 @@ input:focus {
     text-transform: uppercase;
 }
 
-.navi__item {
+.navi > * {
     margin: 0px 12px;
     padding: 16px 5px;
 }
 
-.item__text {
-    font-size: 17px;
-    text-align:center;
-}
-
-.navi__item:hover {
-    border-bottom: #379aff solid 8px;
-    padding-bottom: 7.5px;
-}
-
-.navi__item--dropdown {
+.navi > *:first-child {
     background-color: #fb816a;
     border-radius: 5px;
     display: grid;
@@ -152,16 +142,20 @@ input:focus {
     padding: 10px 0;
 }
 
-.navi__item--dropdown > * { 
-	/* ¿Cómo sería el hijo en BEM? 
-		a) item--dropdown__son
-		b) item__son
-		c) dropdown__son
-		d) Más práctico dejarlo con *
-	*/
+.navi > *:first-child > * {
     font-size: 15px;
     font-weight: bold;
     padding: 0 16px;
+}
+
+.navi > * > div {
+    font-size: 17px;
+    text-align:center;
+}
+
+.navi > *~*:hover {
+    border-bottom: #379aff solid 8px;
+    padding-bottom: 7.5px;
 }
 /*.navi END*/
 
@@ -174,43 +168,31 @@ input:focus {
     padding: 10px 170px 5px 170px;
 }
 
-.header-text-banner__feature {
+.header-text-banner > a {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-column-gap: 25px;
 }
 
-.feature__img {
-	/* ¿Cuál es mejor?:
-		a) .header-text-banner__img
-		b) .header-text-banner__feature--img
-		c) .header-text-banner-feature__img
-		d) .feature__img
-	 */
+.header-text-banner > * > img:first-child {
 	grid-row: span 3;
 }
 
-.feature__span {
-	/* ¿Cuál es mejor?:
-		a) .header-text-banner__span
-		b) .header-text-banner__feature--span
-		c) .header-text-banner-feature__span
-		d) .feature__span
-	 */
+.header-text-banner > * > div {
     color: #4b4b4b;
     font-size: 15px;
 	font-family: lato;
     font-weight: bold;
 }
 
-.feature__span--last {
+.header-text-banner > * > div:last-child {
     font-size: 13px;
     font-weight: normal;
 }
 /*.header-text-banner END*/
 
 /*content START*/
-.content {
+content {
 	background-color: #e0e0e0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -218,7 +200,7 @@ input:focus {
 	padding: 25px 85px;
 }
 
-.content__element {
+content > * {
 	background-color: white;
 	text-align: center;
 	color: #373737;
@@ -233,54 +215,53 @@ input:focus {
 	padding: 15px 25px;
 }
 
-.deal__header {
+.deal > div:first-child {
 	display: grid;
     grid-template-rows: 40px 18px;
 }
 
-.deal__header--title {
+.deal > div:first-child > div:first-child {
 	color: #379aff;
 	font-size: 40px;
 	font-weight: bold;
 }
 
-.deal__header--subtitle {
+.deal > div:first-child > div:nth-child(2) {
 	color: black;
 	font-size: 12px;
 	font-weight: bold;
 }
 
-.deal__cowntdown {
+.deal > div:nth-child(2) {
 	display: flex;
 	justify-content: center;
 }
 
-.deal__cowntdown--odd {
+.deal > div:nth-child(2) > div:nth-child(odd) {
 	color: white;
 	background-color: #f0513a;
 	font-size: 32px;
 }
 
-.deal__cowntdown--even{
+.deal > div:nth-child(2) > div:nth-child(even) {
 	color: #f0513a;
 	font-size: 32px;
 }
 
-.deal__description,.product__description {
-	display: block;
+.deal > div:nth-child(4),.product > div:nth-child(2) {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-.deal__price {
+.deal > div:nth-child(5) {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 1em;
 }
 
-.deal__price--total, 
-.product__price--total {
+.deal > div:nth-child(5) > div:last-child, 
+.product > div:nth-child(5){
 	color: #379aff;
 	font-size: 33.18px;
 }
@@ -294,34 +275,34 @@ input:focus {
     padding: 18px 20px;
 }
 
-.quick-link__element {
-	/* No es más práctico dejarlo como: 
-		".quick-link > *"
-		al ser menos lineas de código tanto en CSS como en el markup?
-	*/
+.quick-link > * {
 	color: black;
 	font-size: 15px;
 }
 
-.quick-link__element--bold {
+.quick-link > div:first-child {
 	font-weight: bold;
 }
 
-.quick-link__img {
+.quick-link > img {
 	align-self: center;
 }
 /*quick-link END*/
 /*content END*/
 
 /*discounts START*/
-.discounts, .products__element {
+discounts, products > * {
 	background-color: #e0e0e0;
 	display: flex;
 	align-items: center;
 	padding: 0 50px;
 }
 
-.discounts__element, .products__subelement {
+products > *:last-child {
+	padding-bottom: 48px;
+}
+
+discounts > *, products > * > * {
 	background-color: white;
 	text-align: center;
 	color: #373737;
@@ -347,14 +328,19 @@ li:before {
 /* Arrow Bullets END*/
 
 /*disconut-product-area START*/
-.discounts__banner {
+a[class*="disconut-banner"] {
 	padding: 15px 30px;
     text-align: left;
     height: 285px;
     width: 25%;
+    background-size: contain;
 }
 
-.discounts-banner__title {
+a[class*="disconut-banner"]:nth-child(3) {
+	margin: 0 31px;
+}
+
+a[class*="disconut-banner"] > div {
 	padding: 10px 0;
 	font-size: 2.57vw;
 	font-weight: bold;
@@ -363,36 +349,28 @@ li:before {
     width: 80%;
 }
 
-.banner__li {
+a[class*="disconut-banner"] > ul > li {
 	font-size: 1.32vw;
 }
 
-.banner--1 {
+.disconut-banner-1 {
 	background: url("./img/discount-img-banner-1.png") no-repeat;
-	background-size: contain;
 }
 
-.banner__title--1 {
+.disconut-banner-1 > div {
 	color: #379aff;
 }
 
-.banner--2 {
+.disconut-banner-2 {
 	background: url("./img/discount-img-banner-2.png") no-repeat;
-	margin: 0 31px;
-    background-size: contain;
 }
 
-.banner--3 {
+.disconut-banner-3 {
 	background: url("./img/discount-img-banner-3.png") no-repeat;
 	color: white;
-    background-size: contain;
 }
 
-.banner__li--white:before {
-	/* ¿No es mejor dejarlo como:
-		".banner--3 > ul >  .banner__li:before"
-		para evitar tanta redundancia y repetición en el markup?
-	*/
+.disconut-banner-3 > ul > li:before {
 	border-color: transparent white;
 }
 /*disconut-product-area END*/
@@ -415,14 +393,10 @@ li:before {
     border-top: #2ca5fa solid 4px;
 }
 
-.subelement__image {
+.product > div:first-child {
     display: flex;
     align-items: center;
     height: 100%;
-}
-
-.products__element:last-child {
-	padding-bottom: 48px;
 }
 
 /*products END*/
@@ -436,31 +410,31 @@ li:before {
     padding: 30px 81px;
 }
 
-.support-callout__feature {
+.support-callout > a {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-column-gap: 25px;
 }
 
-.support-callout__img {
+.support-callout > * > img:first-child {
 	grid-row: span 3;
 }
 
-.support-callout__span {
+.support-callout > * > div {
     color: white;
     font-size: 20.78px;
 	font-family: lato;
     font-weight: bold;
 }
 
-.support-callout__span--last {
+.support-callout > * > div:last-child {
     font-size: 18.01px;
     font-weight: normal;
 }
-/*.support-callout END*/
+/*.header-text-banner END*/
 
 /*footer START*/
-.footer {
+footer {
 	display: flex;
 	justify-content: space-between;
 	color: white;
@@ -468,40 +442,36 @@ li:before {
     padding: 35px 81px 71px;
 }
 
-.footer__element--last {
+footer > div:last-child {
     width: 26%;
 }
 
-.footer__text {
+footer > div > div:not(:last-child) {
 	display: flex;
 	font-size: 20px;
 	padding: 15px 0;
 }
 
-.footer__col {
+footer > div > ul {
 	line-height: 22px;
 	padding: 0 15px;
 }
 
-.footer__col > li:before {
-	/* No es mas práctico así?
-		En lugar de poner "footer_li"
-		en todos y cada li?
-	*/
+footer > div > ul > li:before {
     border-width: 0.35em 0 0.35em 0.45em;
     left: -15px;
     top: 1.1em;
 }
 
-.news-sign-up {
+.news-sign-up > *{
 	border: solid #cfcfcf thin;
 }
 
-.news-sign-up__input::placeholder {
+.news-sign-up > input::placeholder {
     color: white;
 }
 
-.news-sign-up__input {
+.news-sign-up > input {
 	display: flex;
     align-items: center;
     background-color: transparent;
@@ -512,27 +482,23 @@ li:before {
     border-right: none;
 }
 
-.news-sign-up__image{
+.news-sign-up > a {
 	border-left: none;
 }
 
-.footer__text--social {
-	margin: 0 15px;
-}
-
-.social {	
+[social] {	
 	display: flex;
 	align-items: center;
     margin: 0 15px;
     padding: 0 5px;
 }
-.social__icon {	
-	margin-right: 40px;
+[social] > a {	
+	    margin-right: 40px;
 }
 /*footer END*/
 
 /*Copyright START*/
-.copyright {
+copyright {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

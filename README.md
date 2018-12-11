@@ -1,5 +1,9 @@
 # PSDtoHTMLandCSS
 
+## Updates
+
+- Applied some corrections on structure and BEM usage.
+
 ## How To View:
 
 Just click here [PSDtoHTMLandCSS](https://nicbuitr.github.io/PSDtoHTMLandCSS/)
