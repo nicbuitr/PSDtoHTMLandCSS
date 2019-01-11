@@ -368,8 +368,8 @@ li:before {
 }
 
 .banner--1 {
-	background: url("./img/discount-img-banner-1.png") no-repeat;
 	background-size: contain;
+	background: url("./img/discount-img-banner-1.png") no-repeat;
 }
 
 .banner__title--1 {
